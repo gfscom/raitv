@@ -5,7 +5,7 @@ COLOR A
 echo RaiTV Batch Dump
 echo.Codice originale: @gialloporpora
 echo.Modifiche: @gioxx
-echo.Revisione: 20120821-1500
+echo.Versione: 0.1.1 Revisione: 20120828-1717
 echo;
 
 set url=%1
@@ -21,7 +21,10 @@ sed -i -n -e "s/.*href="""http:\/\/\(.*\)""".*/mmsh:\/\/\1/I; s/ /%%20/g; p" tem
 for /f %%i in (temp.html) do set url=%%i
 echo URL STREAM: %url%
 echo;
-pause
+echo. Se pensi che i dati rilevati vadano bene premi un tasto qualsiasi.
+echo. In caso contrario premi CTRL+C e conferma con S l'interruzione del batch.
+echo.
+pause > NUL
 
 mplayer %url% -dumpstream -user-agent %ua%
 REM for /f "delims=. tokens=1,2,3" %%i in ("%time%") do set mytime=%%i%%j
@@ -29,7 +32,12 @@ REM ren stream.dump myfile%mytime%.wmv
 set GIORNO=%DATE:~0,2%
 set MESE=%DATE:~3,2%
 set ANNO=%DATE:~6,4%
-ren stream.dump myfile_%ANNO%%MESE%%GIORNO%.wmv
+ren stream.dump dump_%ANNO%%MESE%%GIORNO%.wmv
+echo;
+echo. Il tuo file si trova nella cartella del batch ed e' stato chiamato
+echo. dump_%ANNO%%MESE%%GIORNO%.wmv
+del /q sed*
+del /q temp.html
 goto fine
 
 :NOURL
