@@ -1,9 +1,10 @@
 Batch Dump for Rai.TV
-Versione: 0.1.1 Revisione: 20120828-1717
-Codice originale: Sandro 'gialloporpora' della Giustina
-Modifiche: Giovanni F. 'Gioxx' Solone
-Pagina di riferimento: http://public.gfsolone.com/wiki/doku.php?id=dumpraitv
 -----------------------------------------------------------------------------------------------
+
+	Versione: 0.1.1 Revisione: 20120828-1717
+	Codice originale: Sandro 'gialloporpora' della Giustina
+	Modifiche: Giovanni F. 'Gioxx' Solone
+	Pagina di riferimento: http://public.gfsolone.com/wiki/doku.php?id=dumpraitv
 
 DumpRaiTV.bat permette di effettuare il download dei video pubblicati sul portale RAI.tv
 
