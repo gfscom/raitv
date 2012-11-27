@@ -5,7 +5,7 @@ COLOR A
 echo RaiTV Batch Dump
 echo.Codice originale: @gialloporpora
 echo.Modifiche: @gioxx
-echo.Versione: 0.1.1 Revisione: 20120828-1717
+echo.Versione: 0.1.2 Revisione: 20121127-1114
 echo;
 
 set url=%1
@@ -32,10 +32,13 @@ REM ren stream.dump myfile%mytime%.wmv
 set GIORNO=%DATE:~0,2%
 set MESE=%DATE:~3,2%
 set ANNO=%DATE:~6,4%
-ren stream.dump dump_%ANNO%%MESE%%GIORNO%.wmv
+set ORA=%TIME: =0%
+set ORA=%ORA:~0,2%
+set MINUTI=%TIME:~3,2%
+ren stream.dump dump_%ANNO%%MESE%%GIORNO%-%ORA%%MINUTI%.wmv
 echo;
 echo. Il tuo file si trova nella cartella del batch ed e' stato chiamato
-echo. dump_%ANNO%%MESE%%GIORNO%.wmv
+echo. dump_%ANNO%%MESE%%GIORNO%-%ORA%%MINUTI%.wmv
 del /q sed*
 del /q temp.html
 goto fine

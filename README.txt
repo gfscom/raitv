@@ -1,5 +1,5 @@
 Batch Dump for Rai.TV
-Versione: 0.1.1 Revisione: 20120828-1717
+Versione: 0.1.2 Revisione: 20121127-1114
 Codice originale: Sandro 'gialloporpora' della Giustina
 Modifiche: Giovanni F. 'Gioxx' Solone
 Pagina di riferimento: http://public.gfsolone.com/wiki/doku.php?id=dumpraitv
